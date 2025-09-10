@@ -1,0 +1,249 @@
+/* ============================= */
+/*         Styles généraux       */
+/* ============================= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #1c1c1c;   /* fond général */
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ============================= */
+/*         Barre de navigation   */
+/* ============================= */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+  z-index: 1000;
+}
+
+/* Logo + titre à gauche */
+.top-left {
+  display: flex;
+  align-items: center;
+}
+
+.club-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.top-left h1 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+/* Boutons centraux */
+.top-center {
+  text-align: center;
+}
+
+.top-center .btn {
+  display: inline-block;
+  margin: 0 8px;
+  padding: 10px 18px;
+  background: #000;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+
+.top-center .btn:hover {
+  background: #333;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #fff;
+}
+
+/* Boutons droite (YouTube / Discord) */
+.top-right {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.top-right .top-btn {
+  display: inline-block;
+  margin-left: 15px;
+  padding: 6px 12px;
+  background: #000;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.top-right .top-btn:hover {
+  background: #333;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #fff;
+}
+
+/* ============================= */
+/*         Contenu principal     */
+/* ============================= */
+main {
+  padding-top: 90px; /* pour la barre fixe */
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Sections générales */
+section {
+  margin: 50px 0;
+  background: #2a2a2a;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+section h2 {
+  color: #fff;
+  font-size: 2em;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 5px #000;
+}
+
+section p {
+  color: #eee;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* ============================= */
+/*        Liste des joueurs      */
+/* ============================= */
+.player-list {
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.player-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 5px #000;
+  transition: 0.3s;
+}
+
+.player-list li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  color: #ff0000;
+  font-size: 1.2em;
+  top: 0;
+}
+
+.player-list li:hover {
+  color: #ff3333;
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/*      Présentation équipe      */
+/* ============================= */
+#presentation {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.team-card {
+  background: #2a2a2a;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  transition: 0.3s;
+  text-align: left;
+}
+
+.team-card h3 {
+  color: #ff0000;
+  margin-top: 0;
+}
+
+.team-card p {
+  color: #eee;
+  line-height: 1.6;
+}
+
+.team-card a {
+  color: #ff6666;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.team-card a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.team-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px #ff0000;
+}
+
+/* ============================= */
+/*         Footer               */
+/* ============================= */
+footer {
+  margin-top: 30px;
+  background: #222;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #ddd;
+}
+
+/* ============================= */
+/*        Hero / Accueil         */
+/* ============================= */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: #2a2a2a;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #eee;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  font-size: 1.1em;
+  padding: 12px 20px;
+}
+
