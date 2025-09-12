@@ -13,6 +13,18 @@
   	<img src="Logo lord of gaming.png" alt="Logo du club" class="club-logo">
   <h1>🔥 Team ESport<br>Lord of Gaming 🔥</h1>
   </div>
+<!-- Bouton menu burger -->
+	<div class="burger" onclick="toggleMenu()">
+ 	 ☰
+	</div>
+
+	<!-- Menu caché (mobile) -->
+	 <div class="mobile-menu" id="mobileMenu">
+  	  <a href="index.html">Accueil</a>
+	  <a href="joueurs.html">Joueurs</a>
+	  <a href="#resultats">Résultats</a>
+	  <a href="#contact">Contact</a>
+	</div>
 
     <div class="top-center">
       <a href="joueurs.html" class="btn">Joueurs</a>
@@ -55,7 +67,13 @@
 
 
 <footer>
-  <p>&copy; 2025 Team ESport non officiel | Tous droits réservés</p>
-</footer>
+    <p>&copy; 2025 Team ESport non officiel | Tous droits réservés</p>
+  </footer>
+	<script>
+	function toggleMenu() {
+	  const menu = document.getElementById("mobileMenu");
+	  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+	}
+	</script>
 </body>
 </html>

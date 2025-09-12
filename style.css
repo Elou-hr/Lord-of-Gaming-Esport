@@ -277,4 +277,45 @@ footer {
     font-size: 14px;
   }
 }
+/* Icône burger */
+.burger {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: white;
+}
+
+/* Menu mobile caché */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #111;
+  position: absolute;
+  top: 60px; /* en dessous de la barre */
+  left: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+.mobile-menu a {
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+}
+
+.mobile-menu a:hover {
+  background: #222;
+}
+
+/* Affichage en mode tel */
+@media (max-width: 768px) {
+  .top-center {
+    display: none; /* on cache le menu normal */
+  }
+
+  .burger {
+    display: block; /* on affiche le burger */
+  }
+}
 
