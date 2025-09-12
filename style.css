@@ -30,7 +30,7 @@ body {
   top: 0;
   left: 0;
   z-index: 3000;
-  border-bottom: 3px solid #000;  /* fine bande noire */
+  border-bottom: 3px solid #000;  /* bande fine noire */
 }
 
 /* Logo + titre */
@@ -48,7 +48,7 @@ body {
   line-height: 1.2;
 }
 
-/* Burger menu */
+/* Burger menu visible partout */
 .burger {
   font-size: 26px;
   color: #fff;
@@ -64,7 +64,7 @@ body {
   top: 60px;
   left: 0;
   width: 100%;
-  background: #111;  /* fond noir pour le menu */
+  background: #111;  /* fond noir menu */
   z-index: 3500;
   padding: 10px 0;
 }
@@ -97,10 +97,10 @@ section {
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
-/* Titres */
+/* Titres h2 */
 h2 {
   margin-bottom: 10px;
-  color: #ff7f50;  /* accent orangé doux */
+  color: #ff5555;  /* rouge vif pro */
   text-shadow: 1px 1px 3px #000;
 }
 
@@ -155,7 +155,7 @@ p {
   text-align: left;
 }
 .team-card h3 {
-  color: #ff5555;  /* rouge clair */
+  color: #ff5555;  /* rouge vif */
   margin-top: 0;
 }
 .team-card p {
@@ -186,3 +186,14 @@ footer {
   padding: 15px 0;
   margin-top: 30px;
 }
+
+/* ============================= */
+/* RESPONSIVE MENU              */
+/* ============================= */
+@media (max-width: 1024px) {
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+  }
+}
+
