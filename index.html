@@ -7,65 +7,48 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
-  <div class="top-bar">
-    <!-- Logo + titre à gauche -->
-    <div class="top-left">
-      <img src="Logo lord of gaming.png" alt="Logo du club" class="club-logo">
-      <h1>🔥 Team ESport<br>Lord of Gaming 🔥</h1>
+    <div class="top-bar">
+      <div class="top-left">
+        <img src="Logo lord of gaming.png" alt="Logo du club" class="club-logo">
+        <h1>🔥 Team ESport<br>Lord of Gaming 🔥</h1>
+      </div>
+      <div class="burger" onclick="toggleMenu()">☰</div>
     </div>
 
-    <!-- Burger menu -->
-    <div class="burger" onclick="toggleMenu()">☰</div>
-  </div>
+    <nav class="mobile-menu">
+      <a href="index.html">Accueil</a>
+      <a href="joueurs.html">Joueurs</a>
+      <a href="#resultats">Résultats</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+      <a href="https://discord.com/" target="_blank">Discord</a>
+    </nav>
+  </header>
 
-  <!-- Menu déroulant -->
-  <nav class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Accueil</a>
-    <a href="joueurs.html">Joueurs</a>
-    <a href="#resultats">Résultats</a>
-    <a href="#contact">Contact</a>
-    <a href="https://www.youtube.com/" target="_blank">YouTube</a>
-    <a href="https://discord.com/" target="_blank">Discord</a>
-  </nav>
-</header>
+  <main>
+    <section id="presentation">
+      <h2>Présentation de l’équipe</h2>
+      <div class="team-card">
+        <h3>1️⃣ Le Commencement</h3>
+        <p>L’aventure de l’équipe Lord of Gaming a commencé il y a quelques mois, grâce à <a href="https://www.youtube.com/@Lepro36ytb" target="_blank">LePro</a> qui voulait essayer de nouvelles choses.</p>
+      </div>
+      <div class="team-card">
+        <h3>2️⃣ L’Évolution</h3>
+        <p>Il a d’abord commencé par une chaîne YouTube qui, en quelques mois, a grandi en nombre de followers...</p>
+      </div>
+      <div class="team-card">
+        <h3>3️⃣ Les Objectifs</h3>
+        <p>L’objectif principal de Lord of Gaming est de continuer à progresser...</p>
+      </div>
+    </section>
+  </main>
 
-
-<main>
- <section id="presentation">
-  <h2>Présentation de l’équipe</h2>
-
-  <div class="team-card">
-    <h3>1️⃣ Le Commencement</h3>
-    <p>L’aventure de l’équipe Lord of Gaming a commencé il y a quelques mois, grâce à <a href="https://www.youtube.com/@Lepro36ytb" target="_blank">LePro</a> qui voulait essayer de nouvelles choses.</p>
-  </div>
-
-  <div class="team-card">
-    <h3>2️⃣ L’Évolution</h3>
-    <p>Il a d’abord commencé par une chaîne YouTube qui, en quelques mois, a grandi en nombre de followers, puis il a eu l’idée de créer une équipe eSport en commençant par la chaîne YouTube puis un serveur Discord.  
-       Il a proposé à des amis de l’aider dans son objectif : au tout début une dizaine de personnes. Ensuite, il a invité une personne qui s’y connaît bien en informatique. Cette personne lui a donné des conseils et a amélioré le serveur très vite.  
-       Un accès pour les fans a été ouvert et nous avons partagé le serveur dans d’autres serveurs Discord.  
-       Actuellement, à la date du 10/09/2025, nous sommes un total de 28 membres.  
-       Et ouais, c’est pas beaucoup, c’est pourquoi on décide de créer un site web et nous vous invitons à venir.</p>
-  </div>
-
-  <div class="team-card">
-    <h3>3️⃣ Les Objectifs</h3>
-    <p>L’objectif principal de Lord of Gaming est de continuer à progresser dans le développement des infrastructures technologiques de l’équipe et de pouvoir être un tout petit peu.  
-       Nous voulons participer à des tournois nationaux et internationaux, tout en inspirant la communauté et en partageant notre passion pour le gaming.  
-       Merci d’avoir lu.</p>
-  </div>
-</section>
-<footer>
-    <p>&copy; 2025 Team ESport non officiel | Tous droits réservés</p>
+  <footer>
+    <p>&copy; 2025 Team Esport non officiel | Tous droits réservés</p>
   </footer>
-	<script>
-function toggleMenu() {
-  const menu = document.getElementById("mobileMenu");
-  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
-}
-</script>
 
-
+  <script src="script.js"></script>
 </body>
 </html>
