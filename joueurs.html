@@ -3,44 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Équipe eSport - Joueurs</title>
+  <title>Équipe Esport</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <div class="top-bar">
-      <!-- Titre à gauche -->
-      <div class="top-left">
-  	<img src="Logo lord of gaming.png" alt="Logo du club" class="club-logo">
-  <h1>🔥 Team ESport<br>Lord of Gaming 🔥</h1>
-  </div>
-	<!-- Bouton menu burger -->
-	<div class="burger" onclick="toggleMenu()">
-	  ☰
-	</div>
-
-	<!-- Menu caché (mobile) -->
-	<div class="mobile-menu" id="mobileMenu">
-	  <a href="index.html">Accueil</a>
-	  <a href="joueurs.html">Joueurs</a>
-	  <a href="#resultats">Résultats</a>
-	  <a href="#contact">Contact</a>
-	</div>
-
-      <!-- Boutons centrés (ici Joueurs remplacé par Accueil) -->
-      <div class="top-center">
-    <a href="index.html" class="btn">Accueil</a>
-        <a href="#resultats" class="btn">Résultats</a>
-        <a href="#contact" class="btn">Contact</a>
-      </div>
-
-      <!-- YouTube / Discord à droite -->
-      <div class="top-right">
-        <a href="https://www.youtube.com/" target="_blank" class="top-btn">YouTube</a>
-        <a href="https://discord.com/" target="_blank" class="top-btn">Discord</a>
-      </div>
+  <div class="top-bar">
+    <!-- Logo + titre à gauche -->
+    <div class="top-left">
+      <img src="Logo lord of gaming.png" alt="Logo du club" class="club-logo">
+      <h1>🔥 Team ESport<br>Lord of Gaming 🔥</h1>
     </div>
-  </header>
+
+    <!-- Burger menu -->
+    <div class="burger" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <!-- Menu déroulant -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Accueil</a>
+    <a href="joueurs.html">Joueurs</a>
+    <a href="#resultats">Résultats</a>
+    <a href="#contact">Contact</a>
+    <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+    <a href="https://discord.com/" target="_blank">Discord</a>
+  </nav>
+</header>
+
+
 
   <main>
     <section id="joueurs">
@@ -55,15 +45,17 @@
   	<li>LG | frutti59♕</li>
       </ul>
   </main>
+
   <footer>
     <p>&copy; 2025 Team ESport non officiel | Tous droits réservés</p>
   </footer>
 	<script>
-	function toggleMenu() {
-	  const menu = document.getElementById("mobileMenu");
-	  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
-	}
-	</script>
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
+</script>
+
+
 </body>
 </html>
-
