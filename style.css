@@ -186,14 +186,3 @@ footer {
   padding: 15px 0;
   margin-top: 30px;
 }
-
-/* ============================= */
-/* RESPONSIVE */
-@media (min-width: 768px) {
-  .mobile-menu {
-    display: none !important;  /* menu caché sur grand écran */
-  }
-  .burger {
-    display: none;  /* burger caché sur grand écran */
-  }
-}
