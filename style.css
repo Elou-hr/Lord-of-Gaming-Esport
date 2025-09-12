@@ -246,4 +246,35 @@ footer {
   font-size: 1.1em;
   padding: 12px 20px;
 }
+/* --- Responsive pour téléphones (max 768px) --- */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column; /* La barre passe en colonne */
+    align-items: center;
+    text-align: center;
+  }
+
+  .top-left h1 {
+    font-size: 18px; /* Réduit le titre */
+  }
+
+  .top-center {
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .btn, .top-btn {
+    width: 80%; /* Les boutons prennent presque toute la largeur */
+    text-align: center;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  ul li {
+    font-size: 14px;
+  }
+}
 
