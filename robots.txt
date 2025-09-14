@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elou-hr.github.io/sitemap.xml
