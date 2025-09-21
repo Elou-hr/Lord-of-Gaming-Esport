@@ -45,37 +45,73 @@
     </div>
 
     <nav class="mobile-menu">
-      <a href="index.html">Accueil</a>
-      <a href="joueurs.html">Joueurs</a>
-      <a href="#resultats">Résultats</a>
-      <a href="#contact">Contact</a>
-      <a href="https://www.youtube.com/" target="_blank">YouTube</a>
-      <a href="https://discord.com/" target="_blank">Discord</a>
+      <a href="index.html">🏠 | Accueil</a>
+      <a href="joueurs.html">🧑‍🤝‍🧑 | Joueurs</a>
+      <a href="actualite.html">📰 | Actualité</a>
+      <a href="https://www.youtube.com/@LORDOFGAMING-i6r">▶️ | YouTube</a>
+      <a href="https://discord.gg/Ah3bJD2EE"_blank">💬 | Discord</a>
     </nav>
   </header>
 
+  <!-- MAIN -->
   <main>
-    <section id="presentation">
-      <h2>Présentation de l’équipe</h2>
-      <div class="team-card">
-        <h3>1️⃣ Le Commencement</h3>
-        <p>L’aventure de l’équipe Lord of Gaming a commencé il y a quelques mois, grâce à <a href="https://www.youtube.com/@Lepro36ytb" target="_blank">LePro</a> qui voulait essayer de nouvelles choses.</p>
-      </div>
-      <div class="team-card">
-        <h3>2️⃣ L’Évolution</h3>
-        <p>Il a d’abord commencé par une chaîne YouTube qui, en quelques mois, a grandi en nombre de followers...</p>
-      </div>
-      <div class="team-card">
-        <h3>3️⃣ Les Objectifs</h3>
-        <p>L’objectif principal de Lord of Gaming est de continuer à progresser...</p>
+    <!-- Présentation (section) -->
+    <section id="presentation" class="section">
+      <div class="container">
+        <h2>🏠 | Accueil et Présentation</h2>
+
+        <div class="team-card">
+          <h3>1️⃣ Le Commencement</h3>
+          <p>
+            L’aventure de Lord of Gaming a démarré il y a quelques mois, lorsque
+            <a href="https://www.youtube.com/@Lepro36ytb" target="_blank" rel="noopener noreferrer">LePro</a>
+            a voulu essayer de nouvelles choses et partager sa passion pour le gaming. Il a monté une chaîne YouTube, invité des amis et posé les bases d'une petite communauté motivée. Ce premier pas a permis de rassembler des joueurs autour d’un projet commun.
+          </p>
+        </div>
+
+        <div class="team-card">
+          <h3>2️⃣ L’Évolution</h3>
+          <p>
+            La chaîne YouTube a rapidement gagné des followers, puis l'idée est venue de créer une équipe eSport et un serveur Discord pour centraliser la communauté. Au départ nous étions une dizaine ; ensuite une personne compétente en informatique a rejoint le groupe et a aidé à structurer et améliorer le serveur. Nous avons ouvert un accès aux fans et partagé le serveur dans d'autres communautés. À la date du 10/09/2025, nous sommes 28 membres — pas énorme, mais suffisant pour se lancer. Ce site est notre moyen d'être plus visibles et d'inviter encore plus de monde.
+          </p>
+        </div>
+
+        <div class="team-card">
+          <h3>3️⃣ Les Objectifs</h3>
+          <p>
+            L'objectif principal de Lord of Gaming est de progresser : améliorer nos infrastructures (serveur, outils, entraînements), organiser et participer à des tournois nationaux puis internationaux. On veut offrir à nos joueurs un cadre sérieux et motivant pour s'améliorer, tout en partageant notre passion avec la communauté. Merci d’avoir pris le temps de nous lire — rejoins-nous si le projet te parle !
+          </p>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Team Esport non officiel | Tous droits réservés</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Script menu (s'assure que script existe) -->
+  <script>
+    // Si tu utilises script.js externe, pas besoin de ce bloc (tu peux garder le fichier).
+    // Ce petit fallback permet d'ouvrir/fermer le menu si script.js n'est pas chargé.
+    function toggleMenu() {
+      const menu = document.querySelector('.mobile-menu');
+      if (!menu) return;
+      const isOpen = menu.style.display === 'flex';
+      menu.style.display = isOpen ? 'none' : 'flex';
+      menu.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+    }
+
+    // Accessibility: ouvrir le menu au clavier (Enter/Space) sur le burger
+    document.addEventListener('keydown', function (e) {
+      const burger = document.querySelector('.burger');
+      if (!burger) return;
+      if ((e.key === 'Enter' || e.key === ' ') && document.activeElement === burger) {
+        e.preventDefault();
+        toggleMenu();
+      }
+    });
+  </script>
 </body>
 </html>

@@ -1,199 +1,281 @@
-/* ============================= */
-/*         RESET & BASE          */
-/* ============================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ===========================
+   RESET & BASE
+   =========================== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #2c2c2c;  /* fond gris sombre doux */
-  color: #f0f0f0;        /* texte blanc cassé */
+  font-family: "Arial", sans-serif;
+  background: #2c2c2c;      /* fond gris sombre doux */
+  color: #f0f0f0;           /* texte blanc cassé */
   line-height: 1.6;
-  padding-top: 70px;      /* espace pour la barre fixe */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 72px;        /* espace pour la barre fixe */
 }
 
-/* ============================= */
-/*      BARRE DE NAVIGATION      */
-/* ============================= */
+/* utilitaires */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+/* ===========================
+   NAVBAR (fixe, sombre)
+   =========================== */
 .top-bar {
-  width: 100%;
-  height: 60px;
-  background: #1a1a1a;    /* gris très foncé */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 15px;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 3000;
-  border-bottom: 3px solid #000;  /* bande fine noire */
+  width: 100%;
+  height: 72px;
+  background: #151515;            /* gris très foncé */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  z-index: 4000;                  /* au-dessus de tout */
+  border-bottom: 3px solid #0b0b0b; /* bande fine noire */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
-/* Logo + titre */
+/* logo + titre */
 .top-left {
   display: flex;
   align-items: center;
+  gap: 12px;
 }
-.top-left .club-logo {
-  height: 40px;
-  margin-right: 10px;
+.club-logo {
+  width: 44px;
+  height: auto;
+  display: block;
 }
 .top-left h1 {
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.05;
   color: #fff;
-  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.2px;
 }
 
-/* Burger menu visible partout */
+/* burger visible partout */
 .burger {
   font-size: 26px;
   color: #fff;
   cursor: pointer;
-  z-index: 4000;
+  user-select: none;
+  z-index: 4500;
 }
 
-/* Menu déroulant */
+/* ===========================
+   MENU DÉROULANT (overlay)
+   - position fixe pour être au-dessus
+   - caché par défaut
+   =========================== */
 .mobile-menu {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
+  display: none;                  /* JS montrera : menu.style.display = 'flex' */
+  position: fixed;
+  top: 72px;                      /* sous la barre */
   left: 0;
   width: 100%;
-  background: #111;  /* fond noir menu */
-  z-index: 3500;
-  padding: 10px 0;
+  height: calc(100vh - 72px);     /* recouvre le reste de la page */
+  background: rgba(8,8,8,0.95);   /* overlay presque opaque */
+  z-index: 4200;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  padding: 18px 12px;
 }
 
+/* liens du menu */
 .mobile-menu a {
-  padding: 12px;
+  width: 100%;
+  max-width: 420px;
+  display: block;
+  padding: 12px 16px;
+  margin: 6px 0;
+  background: #1f1f1f;
   color: #f0f0f0;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-.mobile-menu a:hover {
-  background: #333;
-}
-
-/* ============================= */
-/*         MAIN CONTENT          */
-/* ============================= */
-main {
-  padding: 20px;
-  text-align: center;
-}
-
-/* Sections */
-section {
-  margin: 40px 0;
-  background: #3a3a3a;  /* sections plus claires que le fond */
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-}
-
-/* Titres h2 */
-h2 {
-  margin-bottom: 10px;
-  color: #ff5555;  /* rouge vif pro */
-  text-shadow: 1px 1px 3px #000;
-}
-
-/* Paragraphes */
-p {
-  color: #f0f0f0;
-}
-
-/* ============================= */
-/*        LISTE DES JOUEURS      */
-/* ============================= */
-.player-list {
-  list-style: none;
-  padding: 0;
-  max-width: 400px;
-  margin: 0 auto;
-}
-.player-list li {
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 15px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #f0f0f0;
-  text-shadow: 1px 1px 4px #000;
-  transition: 0.3s;
-}
-.player-list li::before {
-  content: "★";
-  position: absolute;
-  left: 0;
-  color: #ff5555;  /* accent rouge */
-  font-size: 1.2em;
-  top: 0;
-}
-.player-list li:hover {
-  color: #ff8888;
-  transform: scale(1.05);
-}
-
-/* ============================= */
-/*      CARTES PRÉSENTATION      */
-/* ============================= */
-.team-card {
-  background: #3a3a3a;
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 800px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  transition: 0.3s;
+  font-weight: 700;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+  transition: transform .12s ease, background .15s ease, color .12s ease;
   text-align: left;
 }
+.mobile-menu a:hover {
+  transform: translateY(-3px);
+  background: #2a2a2a;
+  color: #ff7f50; /* accent on hover */
+}
+
+/* séparation fine dans le menu (ex : réseaux) */
+.mobile-menu .divider {
+  width: 90%;
+  max-width: 420px;
+  height: 1px;
+  background: rgba(255,255,255,0.05);
+  margin: 10px 0;
+  border-radius: 1px;
+}
+
+/* ===========================
+   MAIN / SECTIONS
+   =========================== */
+main {
+  padding: 22px 0 64px;
+}
+
+.section {
+  background: #343434;    /* panneau légèrement plus clair */
+  border-radius: 12px;
+  padding: 24px;
+  margin: 36px 0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+/* contenu centré */
+.section .container {
+  display: block;
+}
+
+/* TITRE H2 */
+h2 {
+  font-size: 24px;
+  color: #ff5555;          /* accent rouge professionnel */
+  margin-bottom: 14px;
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* paragraphes */
+.section p {
+  color: #e9e9e9;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* ===========================
+   TEAM CARD (corrigé : pas de texte coupé)
+   =========================== */
+.team-card {
+  background: #3a3a3a;
+  margin: 18px auto;
+  padding: 18px;
+  max-width: 820px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: transform .18s ease, box-shadow .18s ease;
+  text-align: left;
+
+  /* IMPORTANT : autoriser l'affichage complet du texte */
+  overflow: visible;
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.55);
+}
+
+/* titre interne (h3) */
 .team-card h3 {
-  color: #ff5555;  /* rouge vif */
-  margin-top: 0;
+  color: #ff6b56;     /* rouge/orange accent */
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 800;
 }
+
+/* texte interne (p) : PAS d'ellipsis, pas d'overflow hidden */
 .team-card p {
-  color: #f0f0f0;
-  line-height: 1.6;
+  color: #ececec;
+  font-size: 15px;
+  line-height: 1.65;
+  white-space: normal;   /* autorise retours à la ligne */
+  overflow: visible;
+  text-overflow: clip;
 }
+
+/* liens à l'intérieur */
 .team-card a {
-  color: #ff8888;  /* lien accent */
+  color: #ff8f75;
+  font-weight: 700;
   text-decoration: none;
-  font-weight: bold;
 }
 .team-card a:hover {
   text-decoration: underline;
   color: #fff;
 }
-.team-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 20px #ff5555;
-}
 
-/* ============================= */
-/*         FOOTER               */
-/* ============================= */
-footer {
-  background: #1a1a1a;
+/* ===========================
+   LISTE JOUEURS
+   =========================== */
+.player-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px auto 0;
+  max-width: 520px;
+}
+.player-list li {
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 14px;
+  font-size: 16px;
   color: #f0f0f0;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.player-list li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ff6b56;
+  font-size: 16px;
+}
+
+/* liens joueurs */
+.player-list li a {
+  color: #ff9b86;
+  text-decoration: none;
+}
+.player-list li a:hover { color: #fff; text-decoration: underline; }
+
+/* ===========================
+   FOOTER
+   =========================== */
+footer {
+  margin-top: 40px;
+  background: #141414;
+  color: #ddd;
   text-align: center;
-  padding: 15px 0;
-  margin-top: 30px;
+  padding: 18px 0;
+  border-top: 1px solid rgba(255,255,255,0.02);
 }
 
-/* ============================= */
-/* RESPONSIVE MENU              */
-/* ============================= */
-@media (max-width: 1024px) {
-  .mobile-menu {
-    display: none;
-    flex-direction: column;
-  }
+/* ===========================
+   ACCESSIBILITÉ: focus outline
+   =========================== */
+a:focus, button:focus {
+  outline: 3px solid rgba(255,127,80,0.18);
+  outline-offset: 2px;
 }
 
+/* ===========================
+   RESPONSIVE tweaks
+   =========================== */
+@media (max-width: 820px) {
+  .top-left h1 { font-size: 15px; }
+  .club-logo { width: 40px; }
+  .team-card { padding: 16px; margin: 14px auto; }
+  .player-list { max-width: 360px; }
+}
+
+@media (max-width: 420px) {
+  .top-left h1 { font-size: 14px; }
+  .club-logo { width: 36px; }
+  .mobile-menu a { max-width: 360px; }
+  .player-list { max-width: 300px; font-size: 15px; }
+}
