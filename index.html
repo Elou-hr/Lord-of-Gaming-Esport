@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lord of Gaming - Maintenance</title>
+  <link rel="icon" type="image/jpeg" href="Logo lord of gaming.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .maintenance-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 70vh;
+      text-align: center;
+    }
+    .maintenance-logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #ff4655;
+      box-shadow: 0 0 20px rgba(255, 70, 85, 0.5);
+      margin-bottom: 20px;
+    }
+    .loader {
+      border: 4px solid #1a1a1a;
+      border-top: 4px solid #ff4655;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="page-title-center">⚠️ MAINTENANCE</div>
+    </div>
+  </header>
+
+  <main class="container maintenance-container">
+    <img src="Logo lord of gaming.png" alt="Logo Lord of Gaming" class="maintenance-logo">
+    
+    <div class="team-card">
+      <h3>TRAVAUX EN COURS...</h3>
+      <p>Le site de la <strong>Lord of Gaming</strong> se refait une beauté.</p>
+      <div class="loader"></div>
+      <p style="font-size: 0.9rem; color: #888;">On revient très vite !</p>
+    </div>
+
+    <div class="team-card">
+      <p>Suivez l'avancée sur nos réseaux :</p>
+      <div style="margin-top:15px;">
+        <a href="https://discord.gg/GxmeFESX" target="_blank" style="color: #ff4655; text-decoration: none; font-weight: bold; margin: 0 10px;">DISCORD</a>
+        <a href="http://www.youtube.com/@LordofgamingE-sport-J25E" target="_blank" style="color: #ff4655; text-decoration: none; font-weight: bold; margin: 0 10px;">YOUTUBE</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2025 Lord of Gaming</footer>
+</body>
+</html>
