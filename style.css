@@ -125,6 +125,10 @@ body {
   padding: 20px;
   border-radius: 12px;
   border-left: 4px solid #ff4655;
+  height: auto;
+  min-height: 100px;
+  width: 100%;
+  overflow: hidden;
 }
 
 h3 { font-family: 'Rajdhani', sans-serif; color: #ff4655; margin-bottom: 10px; }
@@ -177,5 +181,6 @@ footer {
   .top-left h1 { display: none; }
 
 }
+
 
 
