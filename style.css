@@ -140,22 +140,22 @@ h3 { font-family: 'Rajdhani', sans-serif; color: #ff4655; margin-bottom: 10px; }
   border: 1px solid #FFFFFF;
 }
 
-.player-item2 {
+.player-item.player {
   color: #FFFFFF;
   text-decoration: none;
 }
 
-.coach-item {
+.player-item.coach {
   color: #FFFFFF;
   text-decoration: none;
 }
 
-.leader-item { 
+.player-item.leader { 
   border-color: #ffd700;
   color: #ffd700;
 }
 
-.co-leader-item {
+.player-item.co-leader {
   border-color: #00FFE1;
   color: #00FFE1;
 }
@@ -176,3 +176,4 @@ footer {
   .top-left h1 { display: none; }
 
 }
+
