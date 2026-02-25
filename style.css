@@ -2,14 +2,13 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ... (Garder le début du fichier style.css envoyé précédemment) ... */
 
 body {
   font-family: 'Roboto', sans-serif;
   background: radial-gradient(circle at top, #1e1e24, #121212);
   background-attachment: fixed;
   color: #e0e0e0;
-  line-height: 1.6; /* Ta taille de police idéale */
+  line-height: 1.6;
   padding-top: 100px;
   display: flex;
   flex-direction: column;
@@ -18,7 +17,7 @@ body {
 
 .page-title-center {
   font-family: 'Rajdhani', sans-serif;
-  font-size: 1.2rem; /* Taille parfaite pour le titre centré */
+  font-size: 1.2rem; 
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
@@ -26,11 +25,6 @@ body {
   flex-grow: 1;
 }
 
-/* ... (Le reste du CSS reste identique au message précédent) ... */
-
-/* ===========================
-   NAVBAR AMÉLIORÉE
-   =========================== */
 .top-bar {
   position: fixed;
   top: 0;
@@ -50,7 +44,7 @@ body {
 .top-left {
   display: flex;
   align-items: center;
-  width: 20%; /* Équilibre pour le centrage */
+  width: 20%;
 }
 
 .club-logo {
@@ -58,7 +52,6 @@ body {
   filter: drop-shadow(0 0 5px #ff4655);
 }
 
-/* TITRE AU CENTRE DE LA BARRE */
 .page-title-center {
   font-family: 'Rajdhani', sans-serif;
   font-size: 1.2rem;
@@ -69,7 +62,6 @@ body {
   flex-grow: 1;
 }
 
-/* MENU BURGER STYLE ESPORT */
 .burger-container {
   width: 20%;
   display: flex;
@@ -90,9 +82,6 @@ body {
   transition: 0.3s;
 }
 
-/* ===========================
-   MENU MOBILE
-   =========================== */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -127,9 +116,6 @@ body {
   background: #252525;
 }
 
-/* ===========================
-   CONTENU & CARTES
-   =========================== */
 .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
 
 .team-card {
@@ -143,7 +129,6 @@ body {
 
 h3 { font-family: 'Rajdhani', sans-serif; color: #ff4655; margin-bottom: 10px; }
 
-/* GRILLE JOUEURS */
 .player-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -161,12 +146,15 @@ h3 { font-family: 'Rajdhani', sans-serif; color: #ff4655; margin-bottom: 10px; }
   border: 1px solid #333;
 }
 
-.player-item a { color: #fff; text-decoration: none; }
-.player-item.coach { border-color: #ffd700; color: #ffd700; }
+.player-item a {
+  color: #fff;
+  text-decoration: none;
+}
+.player-item.leader { 
+  border-color: #ffd700;
+  color: #ffd700;
+}
 
-/* ===========================
-   FOOTER (FIXÉ)
-   =========================== */
 footer {
   margin-top: auto;
   padding: 20px;
@@ -181,4 +169,5 @@ footer {
 @media (max-width: 600px) {
   .page-title-center { font-size: 0.9rem; }
   .top-left h1 { display: none; }
+
 }
