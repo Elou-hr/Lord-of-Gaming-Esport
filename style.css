@@ -124,7 +124,7 @@ body {
   margin-bottom: 25px;
   padding: 20px;
   border-radius: 12px;
-  border-left: 4px solid #ff4655;
+  border-left: 4px solid #FFFFFF;
   height: auto;
   min-height: 100px;
   width: 100%;
@@ -186,6 +186,7 @@ footer {
   .top-left h1 { display: none; }
 
 }
+
 
 
 
