@@ -52,16 +52,6 @@ body {
   filter: drop-shadow(0 0 5px #ff4655);
 }
 
-.page-title-center {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-  text-align: center;
-  flex-grow: 1;
-}
-
 .burger-container {
   width: 20%;
   display: flex;
@@ -156,7 +146,7 @@ h3 { font-family: 'Rajdhani', sans-serif; color: #ff4655; margin-bottom: 10px; }
 }
 
 .coach-item {
-  collor: #FFFFFF;
+  color: #FFFFFF;
   text-decoration: none;
 }
 
@@ -186,12 +176,3 @@ footer {
   .top-left h1 { display: none; }
 
 }
-
-
-
-
-
-
-
-
-
