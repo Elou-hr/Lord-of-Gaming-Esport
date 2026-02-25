@@ -146,7 +146,7 @@ h3 { font-family: 'Rajdhani', sans-serif; color: #ff4655; margin-bottom: 10px; }
   border: 1px solid #333;
 }
 
-.player-item a {
+.player-item.player a {
   color: #fff;
   text-decoration: none;
 }
@@ -177,4 +177,5 @@ footer {
   .top-left h1 { display: none; }
 
 }
+
 
