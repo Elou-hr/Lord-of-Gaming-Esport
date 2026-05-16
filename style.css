@@ -52,6 +52,11 @@ body {
   filter: drop-shadow(0 0 5px #ff4655);
 }
 
+.club-recompsense {
+  width: 150px;
+  filter: drop-shadow(0 0 10px #ff4655);
+}
+
 .burger-container {
   width: 20%;
   display: flex;
